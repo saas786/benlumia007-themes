@@ -29,7 +29,7 @@ class Provider extends ServiceProvider {
 	 * @return void
 	 */
 	public function register() {
-		$this->app->singleton( 'backdrop/post/type/portfolio', Component::class );
+		$this->app->singleton( 'backdrop/post/type/theme', Component::class );
 
     }
     
@@ -41,6 +41,6 @@ class Provider extends ServiceProvider {
 	 * @return void
 	 */
     public function boot() {
-        $this->app->resolve( 'backdrop/post/type/portfolio' )->boot();
+        $this->app->resolve( 'backdrop/post/type/theme' )->boot();
     }
 }
